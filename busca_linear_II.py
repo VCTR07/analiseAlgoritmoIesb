@@ -24,4 +24,4 @@ termina_tempo = time.time_ns()
 tempo_total = termina_tempo - inicia_tempo
 
 print(saida)
-print("Tempo de execução em ns: ", tempo_total)
+print('Tempo de execução em ns: ', tempo_total)

@@ -1,6 +1,8 @@
 #Busca Linear II
 #Testando git novamente
 
+import time
+
 def busca_linear(A, n, x):
 
     resposta = -1
@@ -16,6 +18,10 @@ n=len(A)
 x=3
 
 #Saída
+inicia_tempo = time.time_ns()
 saida = busca_linear(A, n, x)
+termina_tempo = time.time_ns()
+tempo_total = termina_tempo - inicia_tempo
 
 print(saida)
+print("Tempo de execução em ns: ", tempo_total)

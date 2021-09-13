@@ -1,6 +1,6 @@
 
 #Busca Linear
-#Testando git
+#Teste git
 
 def busca_linear(A, n, x):
 

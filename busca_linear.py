@@ -2,16 +2,23 @@
 #Busca Linear
 #Testando git
 
-def busca_linear_melhorada(A, n, x):
+def busca_linear_sentinela(A, n, x):
 
     resposta = -1
 
-    for i in range(0, n):
-        if A[i] == x: 
-            resposta = i
-            break
+    ultimo = A[n-1]
+    A[n-1] = x
+    i = 0
 
-    return resposta
+    while A[i] != x:
+        i+=1
+    
+    A[n-1] = ultimo
+
+    if i < n-1 or A[n-1] == x:
+        resposta = i
+    
+    return resposta    
 
 #Entradas
 A= [10,9,8,7,6,5,4,3,2,1]
@@ -19,6 +26,6 @@ n=len(A)
 x=3
 
 #Saída
-saida = busca_linear_melhorada(A, n, x)
+saida = busca_linear_sentinela(A, n, x)
 
 print(saida)

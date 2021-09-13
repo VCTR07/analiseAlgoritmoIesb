@@ -2,12 +2,14 @@
 #Busca Linear
 #Testando git
 
-def busca_linear(A, n, x):
+def busca_linear_melhorada(A, n, x):
 
     resposta = -1
 
     for i in range(0, n):
-        if A[i] == x: resposta = i
+        if A[i] == x: 
+            resposta = i
+            break
 
     return resposta
 
@@ -17,6 +19,6 @@ n=len(A)
 x=3
 
 #Saída
-saida = busca_linear(A, n, x)
+saida = busca_linear_melhorada(A, n, x)
 
 print(saida)
